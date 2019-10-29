@@ -119,7 +119,7 @@ int main(int argc, char *argv[]) {
             double time_used;
             clock_gettime(CLOCK_REALTIME, &start);
             int *resultado = (int*) malloc(sizeof(int) * tamanho * tamanho);
-        //    operacaoSerial(m1, m2, m3, resultado, tamanho);
+            operacaoSerial(m1, m2, m3, resultado, tamanho);
             clock_gettime(CLOCK_REALTIME, &end);
             time_used = (int) (end.tv_sec - start.tv_sec) + ((end.tv_nsec - start.tv_nsec) / 1.0e9);
             printf("Operacao sobre matrizes %d x %d com processamento serial levou %f segundos\n", tamanho, tamanho, time_used);
